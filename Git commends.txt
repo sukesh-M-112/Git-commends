@@ -1,0 +1,82 @@
+Git commands – Complete practice checklist
+1. Git installation and configuration
+Command	Purpose
+git --version	Check Git version
+git config --list	Display configurations
+git config --global --list	Display global configuration
+git config --global user.name "Sukesh M"	Set username
+git config --global user.email "email@gmail.com"	Set email
+git config user.name	Check username
+git config user.email	Check email
+git config --global init.defaultBranch main	Set default branch
+
+2. Git repository commands
+Command	Purpose
+git init	Initialize a repository
+git init -b main	Initialize with main branch
+git status	Check repository status
+git rev-parse --show-toplevel	Find repository root
+git rev-parse --git-dir	Find Git directory
+
+3. Git add and commit commands
+Very important
+Command	Purpose
+git add filename	Add a particular file
+git add .	Add changes in current directory
+git add *.java	Add Java files
+git commit -m "message"	Save a commit
+git commit -am "message"	Commit tracked, modified files
+git status	Check staged and unstaged changes
+
+4. Git history commands
+Command	Purpose
+git log	Display commit history
+git log --oneline	Compact commit history
+git log --oneline --all	Show history across branches
+git show	Display latest commit details
+git diff	Show unstaged changes
+git diff --staged	Show staged changes
+
+5. Git file management commands
+Command	Purpose
+git rm filename	Remove a tracked file
+git mv oldname newname	Rename a tracked file
+git restore filename	Discard unstaged changes
+git restore --staged filename	Unstage a file
+git rm --cached filename	Stop tracking a file but keep it locally
+git clean -n	Preview untracked files to be removed
+
+Be careful with git clean -f: it permanently removes untracked files.
+6. Git branch commands
+Command	Purpose
+git branch	List branches
+git branch main	Create a branch named main
+git branch feature	Create a feature branch
+git switch main	Switch to main
+git switch -c feature	Create and switch to a branch
+git branch -M main	Rename current branch
+git branch -d feature	Delete a merged branch
+git merge feature	Merge feature into current branch
+
+7. GitHub connection commands
+These are essential when you want to upload your Java, Python or web development projects to GitHub.
+Command	Purpose
+git remote -v	Display remote repositories
+git remote add origin URL	Connect GitHub repository
+git remote remove origin	Remove remote connection
+git push -u origin main	Push main branch
+git push	Upload new commits
+git pull	Download and integrate changes
+git fetch	Download remote updates
+git clone URL	Copy a remote repository
+
+8. Advanced beginner commands
+Command	Purpose
+git reset filename	Unstage a file
+git reset --soft HEAD~1	Undo latest commit, keep staged changes
+git reset --mixed HEAD~1	Undo latest commit, keep working changes
+git revert HEAD	Create a commit that reverses latest commit
+git stash	Temporarily save working changes
+git stash pop	Restore stashed changes
+git tag	List tags
+git tag v1.0	Create a tag
